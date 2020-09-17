@@ -9,11 +9,11 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 ## Table of contents
-[Installation](#installation-instructions)
-[License](#license)
-[Usage](#usage)
-[Contribution Guidelines](#contribution-guidelines)
-[Testing Guidelines](#testing-guidelines)
+[Installation](#installation-instructions)\
+[License](#license)\
+[Usage](#usage)\
+[Contribution Guidelines](#contribution-guidelines)\
+[Testing Guidelines](#testing-guidelines)\
 [Questions](#questions)
 ## License
 [![License](<https://img.shields.io/static/v1?label=License&message=${data.license}&color=green>)]()

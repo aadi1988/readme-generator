@@ -2,11 +2,11 @@
 ## Description
 
 ## Table of contents
-[Installation](#installation-instructions)
-[License](#license)
-[Usage](#usage)
-[Contribution Guidelines](#contribution-guidelines)
-[Testing Guidelines](#testing-guidelines)
+[Installation](#installation-instructions)\
+[License](#license)\
+[Usage](#usage)\
+[Contribution Guidelines](#contribution-guidelines)\
+[Testing Guidelines](#testing-guidelines)\
 [Questions](#questions)
 ## License
 [![License](<https://img.shields.io/static/v1?label=License&message=CC0-1.0&color=green>)]()
