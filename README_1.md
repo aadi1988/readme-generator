@@ -1,18 +1,25 @@
-# Readme generator
-  [![License](<https://img.shields.io/static/v1?label=License&message=Apache License 2.0&color=green>)]()
+# Readme Generator
+  [![License](<https://img.shields.io/static/v1?label=License&message=MIT&color=green>)]()
 ## Description
-This project creates a readme file from user inputs given
+The project creates a readme file based on user input
 ## Table of contents
-[Installation](#installation-instructions)[License](#license)[Usage](#usage)[Contribution Guidelines](#contribution-guidelines)[Testing Guidelines](#testing-guidelines)[Questions](#questions)
+[Installation](#installation-instructions)  
+[License](#license)  
+[Usage](#usage)  
+[Contribution Guidelines](#contribution-guidelines)  
+[Testing Guidelines](#testing-guidelines)  
+[Questions](#questions)
 ## Installation Instructions
-npm install inquirer
+1. npm install inquirer
 
 ## Usage
 Run the command: node index.js
 ## License
-This project is covered under Apache License 2.0 license
+This project is covered under MIT license
+## Contribution
 This is a non-collaborative project
 ## Testing Guidelines
-No specific testing instructions
+No specific testing considerations
 ## Questions
-My Github Profile: github.com/aadi1988For more questions, you can reach me @ aaditigp@usc.edu
+My Github Profile: github.com/aadi1988  
+For more questions, you can reach me @ aaditigp@usc.edu
