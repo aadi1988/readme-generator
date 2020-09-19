@@ -6,11 +6,11 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 ## Table of contents
-[Installation](#installation-instructions)\
-[License](#license)\
-[Usage](#usage)\
-[Contribution Guidelines](#contribution-guidelines)\
-[Testing Guidelines](#testing-guidelines)\
+[Installation](#installation-instructions)  
+[License](#license)  
+[Usage](#usage)  
+[Contribution Guidelines](#contribution-guidelines)  
+[Testing Guidelines](#testing-guidelines)  
 [Questions](#questions)
 ## Installation Instructions
 ${data.installInstr}
@@ -18,11 +18,12 @@ ${data.installInstr}
 ${data.usage}
 ## License
 This project is covered under ${data.license} license
+## Contribution
 ${data.contribute}
 ## Testing Guidelines
 ${data.test}
 ## Questions
-My Github Profile: github.com/${data.gitHubUser}\
+My Github Profile: github.com/${data.gitHubUser}  
 For more questions, you can reach me @ ${data.email}
 `;
 }
