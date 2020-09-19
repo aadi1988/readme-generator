@@ -1,6 +1,11 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  
+  if (!data.confirmInstallInstr){
+      data.installInstr = "Nothing extra needs to be installed for this project"
+  }
+  if (!data.confirmContribute){
+      data.contribute = "This is a non-collaborative project"
+  }
   return `# ${data.projectTitle}
   [![License](<https://img.shields.io/static/v1?label=License&message=${data.license}&color=green>)]()
 ## Description

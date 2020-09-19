@@ -1,4 +1,4 @@
-console.log(process.argv)
+
 const inquirer = require('inquirer');
 const EditorPrompt = require('inquirer/lib/prompts/editor');
 const generateMarkdown = require('./generateMarkdown.js');
@@ -17,24 +17,57 @@ const questions = [
     },
     {
         name: 'description',
-        message: 'Give a description for your project'
+        message: 'Give a description for your project(required)',
+        validate: function validDesc(text){
+            if(text==="" || text===" "){
+                return "Please give a description for the project"
+            }
+            return true;
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmInstallInstr',
+        message: 'Does anything need to be installed to run this project',
+        default: true
     },
     {
         type: 'editor',
         name: 'installInstr',
-        message: 'Please provide installation instructions'
+        message: 'Please provide installation instructions',
+        when: ({ confirmInstallInstr }) => confirmInstallInstr
+        
     },
     {
         name:'usage',
-        message: 'Please give usage information'
+        message: 'Please give usage information(required)',
+        validate: function validUsage(text){
+            if(text==="" || text===" "){
+                return "Please give valid usage information"
+            }
+            return true;
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmContribute',
+        message: 'Is this a collaborative project',
+        default: true
     },
     {
         name: 'contribute',
-        message: 'Please provide guidelines for others to contribute to the project'
+        message: 'Please provide guidelines for others to contribute to the project',
+        when: ({ confirmContribute }) => confirmContribute,
     },
     {
         name: 'test',
-        message: 'Please provide test instructions for the project'
+        message: 'Please provide test instructions for the project(required)',
+        validate: function validTest(text){
+            if(text==="" || text===" "){
+                return "Please give valid testing considerations"
+            }
+            return true;
+        }
     },
     {
         name: 'license',
@@ -44,11 +77,23 @@ const questions = [
     },
     {
         name: 'gitHubUser',
-        message: 'What is your github username?'
+        message: 'What is your github username?(required)',
+        validate: function validUser(text){
+            if(text==="" || text===" "){
+                return "Please give a valid user id"
+            }
+            return true;
+        }
     },
     {
         name: 'email',
-        message: 'Please give your email address'
+        message: 'Please give your email address(required)',
+        validate: function validEmail(text){
+            if(text==="" || text===" " || text.split('@').length < 0){
+                return "Please give a description for the project"
+            }
+            return true;
+        }
     }
 ];
 
