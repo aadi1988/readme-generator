@@ -23,7 +23,7 @@ ${data.contribute}
 ## Testing Guidelines
 ${data.test}
 ## Questions
-My Github Profile: github.com/${data.gitHubUser}  
+My Github Profile: [github.com/${data.gitHubUser}](https://github.com/${data.gitHubUser})  
 For more questions, you can reach me @ ${data.email}
 `;
 }
