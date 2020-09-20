@@ -115,7 +115,7 @@ function init() {
           console.log(answers['installInstr']);
           var final = generateMarkdown(answers);
           console.log(final);
-          writeToFile('./dist/README.md',final);
+          writeToFile('README.md',final);
      })
      .catch(error => {
           console.log(error);
