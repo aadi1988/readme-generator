@@ -1,7 +1,7 @@
 # Readme Generator
   [![License](<https://img.shields.io/static/v1?label=License&message=MIT&color=green>)]()
 ## Description
-Generates a readme from user input
+This project creates a readme file from given user input
 ## Table of contents
 [Installation](#installation-instructions)  
 [License](#license)  
@@ -10,15 +10,17 @@ Generates a readme from user input
 [Testing Guidelines](#testing-guidelines)  
 [Questions](#questions)
 ## Installation Instructions
-Nothing extra needs to be installed for this project
+npm install inquirer
+
+
 ## Usage
-node index.js
+node index
 ## License
 This project is covered under MIT license
 ## Contribution
 This is a non-collaborative project
 ## Testing Guidelines
-test
+No specific testing instructioons for this project
 ## Questions
 My Github Profile: [github.com/aadi1988](https://github.com/aadi1988)  
 For more questions, you can reach me @ aaditigp@usc.edu

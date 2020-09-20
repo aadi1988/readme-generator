@@ -1,7 +1,8 @@
 
 const inquirer = require('inquirer');
 const EditorPrompt = require('inquirer/lib/prompts/editor');
-const generateMarkdown = require('./generateMarkdown.js');
+const generateMarkdown = require('./src/generateMarkdown.js');
+const writeToFile = require('./utils/writeFile.js');
 const fs = require('fs');
 // array of questions for user
 const questions = [
@@ -35,7 +36,13 @@ const questions = [
         type: 'editor',
         name: 'installInstr',
         message: 'Please provide installation instructions',
-        when: ({ confirmInstallInstr }) => confirmInstallInstr
+        when: ({ confirmInstallInstr }) => confirmInstallInstr,
+        validate: function validInstallInstr(text){
+            if(text==="" || text===" "){
+                return "Please give installation instructions"
+            }
+            return true;
+        }
         
     },
     {
@@ -58,6 +65,9 @@ const questions = [
         name: 'contribute',
         message: 'Please provide guidelines for others to contribute to the project',
         when: ({ confirmContribute }) => confirmContribute,
+        vaidate: function validContribute(text){
+            return "Please provide guidelines to contribute to the project"
+        }
     },
     {
         name: 'test',
@@ -90,20 +100,13 @@ const questions = [
         message: 'Please give your email address(required)',
         validate: function validEmail(text){
             if(text==="" || text===" " || text.split('@').length < 0){
-                return "Please give a description for the project"
+                return "Please give a valid email address"
             }
             return true;
         }
     }
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-       fs.writeFile(fileName,data,function(err){
-           if(err) throw err;
-           console.log('Wrote to file');
-       })
-}
 
 // function to initialize program
 function init() {
@@ -112,7 +115,7 @@ function init() {
           console.log(answers['installInstr']);
           var final = generateMarkdown(answers);
           console.log(final);
-          writeToFile('README_1.md',final);
+          writeToFile('./dist/README.md',final);
      })
      .catch(error => {
           console.log(error);
